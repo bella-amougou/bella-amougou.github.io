@@ -1,206 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
+      href="https://fonts.googleapis.com/css?family=Anton"
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
+      type="text/css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css?family=Long+Cang|Montserrat:300,400,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      media="only screen and (max-width:500px)"
-      href="./css/style.mobile.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Montserrat:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Galerie des villes</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-    <title>Agence Ledor</title>
+      .conteneur {
+        display: grid;
+        margin: 2em;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 1em;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        transition: all 0.7s ease-in;
+      }
+      .title {
+        position: absolute;
+        z-index: 2;
+        color: white;
+        font-size: 1.4rem;
+
+        opacity: 0;
+
+        font-weight: bold;
+        transition: all 0.7 ease-in;
+      }
+      article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transition: all 0.7s ease-in;
+      }
+      article:hover {
+        transform: scale(1.1);
+      }
+      article:hover .title {
+        opacity: 1;
+      }
+      article:hover img {
+        filter: blur(2px);
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <div class="vp-container">
-      <header>
-        <h2 class="vp-logo">
-          <i class="fas fa-crown"></i>
-          <a href="#">Ledor</a>
-        </h2>
-        <ul>
-          <li><a href="#">Nos offres</a></li>
-          <li><a href="#">Notre équipe</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </header>
-      <section class="vp">
-        <div class="vp-content">
-          <h1>
-            Un <strong>immobilier</strong> d'exception pour des clients
-            d'exception
-          </h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
-            expedita nostrum voluptate facere veniam quam porro dolor non cumque
-            optio.
-          </p>
-        </div>
-      </section>
-    </div>
-    <section class="offer">
-      <div class="container">
-        <h2 class="title">Nos dernieres offres</h2>
-        <ul class="offer-list">
-          <li class="offer-elem">
-            <img
-              src="./images/house-1.jpg"
-              alt="house-1"
-              class="offer-elem-img"
-            />
-            <div class="offer-elem-text">
-              <p>Appartement - Paris 75007</p>
-              <p>11 chambres 450 m2</p>
-              <div class="offer-separator"></div>
-              <p>3 900 000 € - $4 200 000</p>
-            </div>
-          </li>
-          <li class="offer-elem">
-            <img
-              src="./images/house-2.jpg"
-              alt="house-2"
-              class="offer-elem-img"
-            />
-            <div class="offer-elem-text">
-              <p>Appartement - Paris 75001</p>
-              <p>5 chambres 233 m2</p>
-              <div class="offer-separator"></div>
-              <p>3 900 000 € - $4 200 000</p>
-            </div>
-          </li>
-          <li class="offer-elem">
-            <img
-              src="./images/house-3.jpg"
-              alt="house-3"
-              class="offer-elem-img"
-            />
-            <div class="offer-elem-text">
-              <p>Appartement - Paris 75001</p>
-              <p>5 chambres 233 m2</p>
-              <div class="offer-separator"></div>
-              <p>3 900 000 € - $4 200 000</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="who">
-      <div class="who-content-img">
-        <img src="./images/team.jpg" alt="team" />
-      </div>
-
-      <div class="who-content-text bg-dark">
-        <h2>
-          Une équipe de <strong>professionnels</strong> avec plus de 10 ans
-          d'expérience
-        </h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-          aliquam commodi expedita exercitationem recusandae minima blanditiis
-          facilis et, distinctio voluptatibus laborum itaque voluptate vel earum
-          ipsum totam dolorum veniam. Iusto repellat labore quisquam dicta ad
-          doloribus inventore corrupti voluptas eligendi cupiditate at assumenda
-          vitae, facere provident, deserunt beatae, consequuntur officiis?
-        </p>
-      </div>
-    </section>
-    <section class="testimonials">
-      <div class="container">
-        <div class="testimonials-content">
-          <h2 class="title">Voici ce qu'ils pensent de nous</h2>
-          <div class="testimonials-elem">
-            <div class="testimonials-elem-text">
-              <p>
-                <i class="fas fa-quote-left"></i>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit,
-                aperiam.
-                <i class="fas fa-quote-right"></i>
-              </p>
-            </div>
-            <div class="testimonials-elem-profil">
-              <img src="./images/person-3.jpg" alt="person-1" />
-              <p>Jean Dupont</p>
-              <em>CEO étoile</em>
-            </div>
-          </div>
-          <div class="testimonials-elem">
-            <div class="testimonials-elem-profil">
-              <img src="./images/person-2.jpg" alt="person-2" />
-              <p>Arthur Lac</p>
-              <em>Développeur Web</em>
-            </div>
-            <div class="testimonials-elem-text">
-              <p>
-                <i class="fas fa-quote-left"></i>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Recusandae illo quam saepe veritatis omnis quaerat ullam animi.
-                Alias excepturi velit maiores, adipisci incidunt labore
-                voluptatum quod, autem, architecto cupiditate id tempore soluta
-                ullam quia recusandae? Culpa, eius, voluptates corrupti deleniti
-                incidunt omnis error nulla perferendis blanditiis quasi,
-                perspiciatis iure vel?
-                <i class="fas fa-quote-right"></i>
-              </p>
-            </div>
-          </div>
-          <div class="testimonials-elem">
-            <div class="testimonials-elem-text">
-              <p>
-                <i class="fas fa-quote-left"></i>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
-                exercitationem aut, reiciendis dolor, dolorem eius animi atque
-                maxime deleniti distinctio ex inventore rem cupiditate nostrum a
-                omnis, illum quasi delectus.
-                <i class="fas fa-quote-right"></i>
-              </p>
-            </div>
-            <div class="testimonials-elem-profil">
-              <img src="./images/person-3.jpg" alt="person-3" />
-              <p>Julie Roux</p>
-              <em>Développeuse Web</em>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="contact bg-dark">
-      <form action="#" class="contact-form">
-        <h2 class="title">Pour nous <strong>contacter</strong></h2>
-        <input type="text" placeholder="Nom" name="name" id="name" />
-        <input type="email" placeholder="Email" name="email" id="email" />
-        <input
-          type="text"
-          placeholder="Votre message ..."
-          name="message"
-          id="message"
+    <h2>Gallerie des villes</h2>
+    <div class="conteneur">
+      <article>
+        <span class="title">Yaoundé</span>
+        <img
+          src="https://source.unsplash.com/random/400x300?paris+cityscape"
+          alt="paris"
         />
-        <div>
-          <button>Soumettre</button>
-        </div>
-      </form>
-    </section>
-    <footer>
-      <p>Copyright © 2021 Bella, Inc.</p>
-    </footer>
+      </article>
+      <article>
+        <span class="title">Douala</span
+        ><img
+          src="https://source.unsplash.com/random/400x300?london+cityscape"
+          alt="london"
+        />
+      </article>
+      <article>
+        <span class="title">Bella</span
+        ><img
+          src="https://source.unsplash.com/random/400x300?newyork+cityscape"
+          alt="newyork"
+        />
+      </article>
+      <article>
+        <span class="title">Berlin</span
+        ><img
+          src="https://source.unsplash.com/random/400x300?pekin+cityscape"
+          alt="pekin"
+        />
+      </article>
+      <article>
+        <span class="title">Rio</span
+        ><img
+          src="https://source.unsplash.com/random/400x300?dehli+cityscape"
+          alt="dehli"
+        />
+      </article>
+      <article>
+        <span class="title">Tokyo</span
+        ><img
+          src="https://source.unsplash.com/random/400x300?tokyo+cityscape"
+          alt="tokyo"
+        />
+      </article>
+      <article>
+        <span class="title">Jakarta</span
+        ><img
+          src="https://source.unsplash.com/random/400x300?jakarta+cityscape"
+          alt="jakarta"
+        />
+      </article>
+      <article>
+        <span class="title">Java</span
+        ><img
+          src="https://source.unsplash.com/random/400x300?shanghai+cityscape"
+          alt="shanghai"
+        />
+      </article>
+      <article>
+        <span class="title">Berlin</span
+        ><img
+          src="https://source.unsplash.com/random/400x300?berlin+cityscape"
+          alt="berlin"
+        />
+      </article>
+    </div>
   </body>
 </html>
