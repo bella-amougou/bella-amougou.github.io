@@ -9,137 +9,68 @@
       rel="stylesheet"
       type="text/css"
     />
-    <title>Galerie des villes</title>
+    <title>Les grilles</title>
     <style>
-      * {
-        box-sizing: border-box;
+      body {
+        margin: 0;
       }
-
-      .conteneur {
-        display: grid;
-        margin: 2em;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        grid-gap: 1em;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-        filter: blur(0px) grayscale(0);
-        transition: filter 0.9s ease-out;
-      }
-
-      .title {
-        font-size: 2em;
-        font-family: "Anton", sans-serif;
-        letter-spacing: 0.4em;
-        z-index: 2;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background: rgba(90, 0, 10, 0.3);
-        color: white;
+      .container {
+        min-height: 100vh;
+        background: black;
         display: flex;
-        align-items: center;
+        flex-direction: column;
         justify-content: center;
-        opacity: 0;
-        transition: all 0.9s ease-out;
-        text-shadow: 2px 2px 10px #000000;
-      }
-      h2 {
-        text-align: center;
-      }
-
-      article {
+        align-items: center;
+        align-content: center;
         position: relative;
-        transition: all 1s ease-in;
       }
-
-      article:hover {
-        z-index: 1;
-        cursor: pointer;
-        transform: scale(1.1);
+      .text {
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 5rem;
+        position: absolute;
+        top: 38%;
       }
-
-      article:hover img {
-        filter: blur(2px) grayscale(0.5);
-        transition: filter 0.9s ease-in;
+      .item {
+        width: 15px;
+        height: 32px;
+        margin-right: 10px;
+        animation: loader 1.5s infinite;
       }
-
-      article:hover .title {
-        opacity: 1;
-        transition: all 0.9s ease-in;
-        text-shadow: 4px 5px 10px #1e3799;
+      @keyframes loader {
+        50% {
+          height: 74px;
+        }
+      }
+      .loader {
+        display: flex;
+      }
+      .item:nth-child(1) {
+        background: chocolate;
+        animation-delay: -0.4s;
+      }
+      .item:nth-child(2) {
+        background: #0578aa;
+        animation-delay: -0.2s;
+      }
+      .item:nth-child(3) {
+        background: #e31b2c;
+        animation-delay: 0s;
+      }
+      .white {
+        color: #0578aa;
       }
     </style>
   </head>
   <body>
-    <h2>Gallerie des villes</h2>
-    <div class="conteneur">
-      <article>
-        <span class="title">Yaoundé</span>
-        <img
-          src="https://source.unsplash.com/random/400x300?paris+cityscape"
-          alt="paris"
-        />
-      </article>
-      <article>
-        <span class="title">Douala</span
-        ><img
-          src="https://source.unsplash.com/random/400x300?london+cityscape"
-          alt="london"
-        />
-      </article>
-      <article>
-        <span class="title">Bella</span
-        ><img
-          src="https://source.unsplash.com/random/400x300?newyork+cityscape"
-          alt="newyork"
-        />
-      </article>
-      <article>
-        <span class="title">Berlin</span
-        ><img
-          src="https://source.unsplash.com/random/400x300?pekin+cityscape"
-          alt="pekin"
-        />
-      </article>
-      <article>
-        <span class="title">Rio</span
-        ><img
-          src="https://source.unsplash.com/random/400x300?dehli+cityscape"
-          alt="dehli"
-        />
-      </article>
-      <article>
-        <span class="title">Tokyo</span
-        ><img
-          src="https://source.unsplash.com/random/400x300?tokyo+cityscape"
-          alt="tokyo"
-        />
-      </article>
-      <article>
-        <span class="title">Jakarta</span
-        ><img
-          src="https://source.unsplash.com/random/400x300?jakarta+cityscape"
-          alt="jakarta"
-        />
-      </article>
-      <article>
-        <span class="title">Java</span
-        ><img
-          src="https://source.unsplash.com/random/400x300?shanghai+cityscape"
-          alt="shanghai"
-        />
-      </article>
-      <article>
-        <span class="title">Berlin</span
-        ><img
-          src="https://source.unsplash.com/random/400x300?berlin+cityscape"
-          alt="berlin"
-        />
-      </article>
+    <div class="container">
+      <div class="text"><span class="white">Safe</span> Driver</div>
+      <div class="loader">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
     </div>
   </body>
 </html>
