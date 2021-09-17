@@ -1,0 +1,29 @@
+nav{
+    grid-template-columns: auto;
+    align-items: center;
+    text-align: center;
+}
+ul{
+    flex-direction: column;
+}
+nav{
+    padding: 1rem .7rem;
+    position: relative;
+}
+main{
+    justify-content: flex-start;
+    margin: 2.5rem 1rem;
+    height: auto;
+}
+
+main h1{
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+.spe{
+    grid-template-columns: 1fr;
+}
+.spec{
+    margin: 1rem 1.5rem;
+}
